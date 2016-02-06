@@ -16,7 +16,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<String> desires;
+    private List<List<String>> desires;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +47,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void initializeData(){
         desires = new ArrayList<>();
-        desires.add("Streak the Lawn");
-        desires.add("Lighting of the Lawn");
-        desires.add("Fourth year fifth");
+        List l1 = new ArrayList<>();
+        l1.add("Streak the Lawn");
+        l1.add("Run across the lawn...");
+        desires.add(l1);
+        List l2 = new ArrayList<>();
+        l2.add("Lighting of the Lawn");
+        l2.add("Lights on the Rotunda!");
+        desires.add(l2);
+        /*desires.add("Fourth year fifth");
         desires.add("Paint Beta Bridge");
         desires.add("Go to Foxfield");
         desires.add("Visit Edgar Allen Poe's room");
@@ -58,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         desires.add("Visit Montecello");
         desires.add("High five Cav Man");
         desires.add("See a movie at Virginia Film Festival");
-        desires.add("Study in the Music Library");
+        desires.add("Study in the Music Library");*/
     }
 
     @Override
@@ -82,4 +88,9 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /*@Override
+    public void onSaveInstanceState(Bundle savedInstanceState){
+        super.onSaveInstanceState(savedInstanceState);
+    }*/
 }
