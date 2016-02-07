@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation = "vertical">
+    android:orientation = "vertical"
+    tools:context="com.example.android.bucketlist.ItemDescription">
 
 
     <TextView
+        android:id="@+id/title"
         android:fontFamily="Arial"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:text="Item Description"
@@ -19,10 +24,10 @@
     <TextView
         android:id="@+id/desc"
         android:fontFamily="Arial"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:text="Test List Item"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center_horizontal"
         />
@@ -32,9 +37,7 @@
         android:layout_height="wrap_content"
         android:text="<-- Back"
         android:id="@+id/backbutton"
-        android:layout_below="@+id/description"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="152dp"
-        android:onClick="MainActivity"
         />
+
 </LinearLayout>
