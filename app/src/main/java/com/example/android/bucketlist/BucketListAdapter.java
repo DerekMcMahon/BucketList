@@ -23,7 +23,7 @@ public class BucketListAdapter extends RecyclerView.Adapter<BucketListAdapter.De
         }
     }
 
-    List<String> desires;
+   List<String> desires;
 //Test comment
     public BucketListAdapter(List<String> desires){
         this.desires = desires;

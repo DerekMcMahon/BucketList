@@ -16,7 +16,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<String> desires;
+    private List<List<String>> desires;
     //This is a comment - Jacqueline
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,18 +47,34 @@ public class MainActivity extends AppCompatActivity {
 
     public void initializeData(){
         desires = new ArrayList<>();
-        desires.add("Streak the Lawn");
-        desires.add("Lighting of the Lawn");
-        desires.add("Fourth year fifth");
+        ArrayList l1 = new ArrayList<String>();
+        l1.add("Streak the Lawn");
+        l1.add("At the top of the rotunda steps, strip down into your birthday suite and run down to the Homer Statue, cirle it three " +
+                "times and then run back to the steps to look through the key hole of the rotunda and grab your clothes");
+        desires.add(l1);
+
+        /*
+        desires.add("Streak the Lawn", "hello");
+        desires.add("See the Lighting of the Lawn");
+        desires.add("Run the Fourth Year 5K");
         desires.add("Paint Beta Bridge");
-        desires.add("Go to Foxfield");
+        desires.add("See a horse at Foxfield");
         desires.add("Visit Edgar Allen Poe's room");
-        desires.add("Go in the steam tunnels");
+        desires.add("Go Steam Tunneling");
+        desires.add("Nab the #1 Ticket at Bodos");
         desires.add("Eat a picnic on the Lawn");
-        desires.add("Visit Montecello");
         desires.add("High five Cav Man");
-        desires.add("See a movie at Virginia Film Festival");
-        desires.add("Study in the Music Library");
+        desires.add("Hike Humpback at Sunrise");
+        desires.add("Sing the Good Ole Song");
+        desires.add("Dress up 'Guys in Ties, Girls in Pearls'");
+        desires.add("Order Food to Clemons");
+        desires.add("Play in Madbowl");
+        desires.add("Hug Ms Kathy in Newcomb");
+        desires.add("Play an IM Sport");
+        desires.add("Attend a Class You're not Enrolled in");
+        desires.add("Go Wine Tasting");
+        desires.add("Go to All the Gyms on Grounds");
+*/
     }
 
     @Override
