@@ -1,5 +1,6 @@
 package com.example.android.bucketlist;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,7 +17,7 @@ public class ItemDescription extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_item_description);
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         String desc = intent.getStringExtra("Description");
         TextView tv = (TextView)findViewById(R.id.desc);
         tv.setText(desc);
@@ -27,6 +28,7 @@ public class ItemDescription extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), MainActivity.class);
                 v.getContext().startActivity(intent);
+                ((Activity)v.getContext()).finish();
             }
         });
     }

@@ -34,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
         BucketListAdapter adapter = new BucketListAdapter(desires);
         bucketlist.setAdapter(adapter);
 
+        if(savedInstanceState != null){
+            String[] checkboxStates = savedInstanceState.getStringArray("States");
+            BucketListAdapter.checkboxStates = checkboxStates;
+        }
+
+        /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        */
     }
 
     public void initializeData(){
@@ -156,8 +163,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /*@Override
+    @Override
     public void onSaveInstanceState(Bundle savedInstanceState){
         super.onSaveInstanceState(savedInstanceState);
-    }*/
+        String[] checkboxStates = BucketListAdapter.getCheckboxStates();
+        savedInstanceState.putStringArray("States", checkboxStates);
+    }
 }
