@@ -36,6 +36,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/backbutton"
         android:layout_marginTop="152dp"
+        android:text="Back"
+        android:onClick="goBack"
         />
 
 </LinearLayout>

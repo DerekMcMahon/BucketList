@@ -132,8 +132,9 @@ public class MainActivity extends AppCompatActivity {
         l18.add("Once you turn 21, of course, enjoy one of Charlottesville's finest vineyards and go wine tasting!");
         desires.add(l18);
         List l19 = new ArrayList<>();
-        l19.add("Go Wine Tasting");
-        l19.add("Once you turn 21, of course, enjoy one of Charlottesville's finest vineyards and go wine tasting!");
+        l19.add("Eat Something Greasy at the White Spot");
+        l19.add("Whether it is a gus burger, some fries or a donut filled with vanilla ice cream, fill your late night cravings at this " +
+                "classic Cville corner restaurant!");
         desires.add(l19);
         List l20 = new ArrayList<>();
         l20.add("Go to All the Gyms on Grounds");

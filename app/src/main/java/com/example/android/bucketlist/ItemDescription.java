@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ItemDescription extends AppCompatActivity {
@@ -24,12 +25,23 @@ public class ItemDescription extends AppCompatActivity {
 
         tv.setOnClickListener(new View.OnClickListener() {
 
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), MainActivity.class);
                 v.getContext().startActivity(intent);
                 ((Activity)v.getContext()).finish();
             }
+
+
         });
+
+
+    }
+
+    public void goBack(View v){
+        Intent intent = new Intent(this, MainActivity.class);
+        v.getContext().startActivity(intent);
+
     }
 }
