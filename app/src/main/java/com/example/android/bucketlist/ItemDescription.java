@@ -20,8 +20,11 @@ public class ItemDescription extends AppCompatActivity {
 
         final Intent intent = getIntent();
         String desc = intent.getStringExtra("Description");
+        String title = intent.getStringExtra("Activity Name");
         TextView tv = (TextView)findViewById(R.id.desc);
+        TextView tv2 = (TextView)findViewById(R.id.title);
         tv.setText(desc);
+        tv2.setText(title);
 
     }
 

@@ -62,7 +62,9 @@ public class BucketListAdapter extends RecyclerView.Adapter<BucketListAdapter.De
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), ItemDescription.class);
                 String message = desires.get(position).get(1);
+                String title = desires.get(position).get(0);
                 intent.putExtra("Description", message);
+                intent.putExtra("Activity Name", title);
                 v.getContext().startActivity(intent);
                 ((Activity)v.getContext()).finish();
             }
