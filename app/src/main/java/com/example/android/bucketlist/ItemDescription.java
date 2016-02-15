@@ -23,25 +23,11 @@ public class ItemDescription extends AppCompatActivity {
         TextView tv = (TextView)findViewById(R.id.desc);
         tv.setText(desc);
 
-        tv.setOnClickListener(new View.OnClickListener() {
-
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), MainActivity.class);
-                v.getContext().startActivity(intent);
-                ((Activity)v.getContext()).finish();
-            }
-
-
-        });
-
-
     }
 
     public void goBack(View v){
         Intent intent = new Intent(this, MainActivity.class);
         v.getContext().startActivity(intent);
-
+        ((Activity)v.getContext()).finish();
     }
 }
